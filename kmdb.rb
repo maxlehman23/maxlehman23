@@ -77,36 +77,85 @@
 # Use `Model.destroy_all` code.
 # TODO!
 
-
-
+Studio.destroy_all 
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all 
 
 # Generate models and tables, according to the domain model.
 # TODO!
 
-rails generate model Studio 
-t.integer "id"
-t.string "name"
-
-rails generate model Movie
-t.integer "id"
-t.string "title"
-t.string "year_released"
-t.string "rating"
-t.integer "studio_id"
-
-rails generate model Actor 
-t.integer "id"
-t.string "name"
-
-rails generate model Role 
-t.integer "id"
-t.integer "movie_id"
-t.integer "actor_id"
-t.string "character"
+# done in terminal! 
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+studio1 = Studio.new
+studio1["name"] = "Warner Bros."
+studio1.save
+
+movie1 = Movie.new 
+movie1["title"] = "Batman Begins"
+movie1["year_released"] = 2005
+movie1["rating"] = "PG-13"
+movie1.save
+
+movie2 = Movie.new 
+movie2["title"] = "The Dark Knight"
+movie2["year_released"] = 2008
+movie2["rating"] = "PG-13"
+movie2.save
+
+movie3 = Movie.new 
+movie3["title"] = "The Dark Knight Rises"
+movie3["year_released"] = 2012
+movie3["rating"] = "PG-13"
+movie3.save
+
+actor1 = Actor.new
+actor1["name"] = "Christian Bale"
+actor1.save
+
+actor2 = Actor.new
+actor2["name"] = "Michael Cane"
+actor2.save
+
+actor3 = Actor.new
+actor3["name"] = "Liam Neeson"
+actor3.save
+
+actor4 = Actor.new
+actor4["name"] = "Katie Holmes"
+actor4.save
+
+actor5 = Actor.new
+actor5["name"] = "Gary Oldman"
+actor5.save
+
+actor6 = Actor.new
+actor6["name"] = "Heath Ledger"
+actor6.save
+
+actor7 = Actor.new
+actor7["name"] = "Aaron Eckhart"
+actor7.save
+
+actor8 = Actor.new
+actor8["name"] = "Maggie Gyllenhaal"
+actor8.save
+
+actor9 = Actor.new
+actor9["name"] = "Tom Hardy"
+actor9.save
+
+actor10 = Actor.new
+actor10["name"] = "Joseph Gordon-Levitt"
+actor10.save
+
+actor11 = Actor.new
+actor11["name"] = "Anne Hathaway"
+actor11.save
 
 # Prints a header for the movies output
 puts "Movies"
