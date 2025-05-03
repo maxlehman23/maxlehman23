@@ -157,6 +157,50 @@ actor11 = Actor.new
 actor11["name"] = "Anne Hathaway"
 actor11.save
 
+role1 = Role.new 
+role1["character"] = "Bruce Wayne"
+role1.save 
+
+role2 = Role.new 
+role2["character"] = "Alfred"
+role2.save
+
+role3 = Role.new 
+role3["character"] = "Ra's Al Ghul"
+role3.save
+
+role4 = Role.new 
+role4["character"] = "Rachel Dawes"
+role4.save
+
+role5 = Role.new 
+role5["character"] = "Commissioner Gordon"
+role5.save
+
+role6 = Role.new 
+role6["character"] = "Joker"
+role6.save
+
+role7 = Role.new 
+role7["character"] = "Harvey Dent"
+role7.save
+
+role8 = Role.new 
+role8["character"] = "Bane"
+role8.save
+
+role9 = Role.new 
+role9["character"] = "John Blake"
+role9.save
+
+role10 = Role.new 
+role10["character"] = "Seline Kyle"
+role10.save
+
+
+
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
