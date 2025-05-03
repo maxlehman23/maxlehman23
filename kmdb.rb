@@ -281,9 +281,6 @@ role15["movie_id"] = dark_knight_rises["id"]
 role15["actor_id"] = anne["id"]
 role15.save
 
-
-
-
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -291,6 +288,12 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
+movies = [movie1, movie2, movie3]
+
+for movie in movies
+    puts "#{movie.title} (#{movie.year_released}) #{movie.rating}"
+end 
 
 # Prints a header for the cast output
 puts ""
