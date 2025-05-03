@@ -77,8 +77,32 @@
 # Use `Model.destroy_all` code.
 # TODO!
 
+
+
+
 # Generate models and tables, according to the domain model.
 # TODO!
+
+rails generate model Studio 
+t.integer "id"
+t.string "name"
+
+rails generate model Movie
+t.integer "id"
+t.string "title"
+t.string "year_released"
+t.string "rating"
+t.integer "studio_id"
+
+rails generate model Actor 
+t.integer "id"
+t.string "name"
+
+rails generate model Role 
+t.integer "id"
+t.integer "movie_id"
+t.integer "actor_id"
+t.string "character"
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
