@@ -85,7 +85,7 @@ Role.destroy_all
 # Generate models and tables, according to the domain model.
 # TODO!
 
-# done in terminal! 
+# done in terminal via migrate functions 
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
@@ -289,10 +289,11 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
-movies = [movie1, movie2, movie3]
+movies = Movie.all
 
-for movie in movies
-    puts "#{movie.title} (#{movie.year_released}) #{movie.rating}"
+for movie in movies 
+    studio = Studio.find_by({"id" => movie.studio_id})
+    puts "#{movie.title} #{movie.year_released} #{movie.rating} #{studio.name}"
 end 
 
 # Prints a header for the cast output
@@ -303,3 +304,12 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+roles = Role.all
+
+for role in roles
+    movie = Movie.find_by({"id" => role.movie_id})
+    actor = Actor.find_by({"id" => role.actor_id})
+    puts "#{movie.title} #{actor.name} #{role.character}"
+end 
+    
